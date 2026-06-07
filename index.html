@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>کرافت‌نیوز | اخبار رسمی ماینکرافت</title>
-    <!-- فونت وزیرمتن (وزیر) برای خوانایی بهتر -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <style>
         * {
@@ -15,24 +14,23 @@
 
         body {
             font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #1a2a1f;
-            background-image: radial-gradient(circle at 10% 20%, rgba(60, 90, 50, 0.6) 0%, #0e1a0c 100%);
-            color: #eef4e0;
+            /* بک‌گراند آبی فیروزه‌ای خیلی روشن مایل به سفید */
+            background: linear-gradient(145deg, #c8eeff 0%, #e2f7ff 100%);
+            color: #1e2a2f;
             line-height: 1.6;
         }
 
-        /* کانتینر اصلی */
         .container {
             max-width: 1300px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* هدر */
+        /* هدر با رنگ تیره‌تر برای تضاد (اختیاری) */
         header {
-            background: #0f2a0b;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border-bottom: 4px solid #6b8c42;
+            background: #00738b;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-bottom: 4px solid #b2ebf2;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -46,15 +44,12 @@
         }
         .logo h1 {
             font-size: 1.9rem;
-            background: linear-gradient(135deg, #c8e6a5, #8bc34a);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 2px 2px 0 #2c4b1e;
+            color: #ffffff;
+            text-shadow: 2px 2px 0 #004d5f;
         }
         .logo p {
             font-size: 0.8rem;
-            color: #b9d48b;
+            color: #d1f5ff;
         }
         nav ul {
             display: flex;
@@ -63,17 +58,16 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #f5f9e8;
+            color: #f0fdfe;
             font-weight: 500;
             transition: 0.3s;
             padding: 6px 0;
             border-bottom: 2px solid transparent;
         }
         nav ul li a:hover {
-            border-bottom-color: #8bc34a;
-            color: #e3ffb3;
+            border-bottom-color: #b2ebf2;
+            color: #ffffff;
         }
-        /* پاسخگویی منو */
         @media (max-width: 700px) {
             .header-flex {
                 flex-direction: column;
@@ -81,29 +75,30 @@
             }
         }
 
-        /* بنر شعار */
+        /* بنر شعار (کادر پررنگ) */
         .hero {
-            background: linear-gradient(95deg, #2d4a1e, #1c3312);
+            background: #0097b2; /* آبی فیروزه‌ای پررنگ */
             margin: 30px 0;
             padding: 30px 25px;
             border-radius: 35px;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            border: 1px solid #6e964b;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            border: 1px solid #b2ebf2;
+            color: white;
         }
         .hero h2 {
             font-size: 2rem;
             margin-bottom: 12px;
         }
         .hero span {
-            background-color: #4c6e2c;
+            background-color: #005f73;
             padding: 5px 12px;
             border-radius: 60px;
             display: inline-block;
             font-weight: bold;
         }
 
-        /* شبکه اصلی: articles + sidebar */
+        /* شبکه اصلی */
         .content-grid {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -111,50 +106,50 @@
             margin: 40px 0;
         }
 
-        /* کارت‌های خبری */
+        /* کارت‌های خبری (کادر پررنگ) */
         .news-card {
-            background: rgba(25, 45, 18, 0.8);
-            backdrop-filter: blur(2px);
+            background: #00a5c3;
             border-radius: 24px;
             overflow: hidden;
             margin-bottom: 30px;
             transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid #5a8542;
-            box-shadow: 0 5px 12px black;
+            border: 1px solid #b2ebf2;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
         }
         .news-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 15px 25px rgba(0,0,0,0.5);
-            background: #1f3a16;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+            background: #00b8d9;
         }
         .news-img {
             width: 100%;
             height: 210px;
             object-fit: cover;
             display: block;
-            border-bottom: 3px solid #8bc34a;
+            border-bottom: 3px solid #b2ebf2;
         }
         .news-content {
             padding: 20px;
+            color: #f3fffc;
         }
         .news-title {
             font-size: 1.6rem;
             margin-bottom: 12px;
-            color: #eaffc4;
+            color: #ffffff;
         }
         .news-meta {
             display: flex;
             gap: 15px;
             font-size: 0.8rem;
-            color: #bfdc9c;
+            color: #d9f5ff;
             margin-bottom: 15px;
         }
         .news-summary {
             margin-bottom: 20px;
-            color: #e0f0ce;
+            color: #effffa;
         }
         .read-more {
-            background-color: #3f6530;
+            background-color: #005f73;
             border: none;
             padding: 8px 20px;
             border-radius: 40px;
@@ -165,68 +160,73 @@
             font-family: inherit;
         }
         .read-more:hover {
-            background-color: #5c883f;
+            background-color: #007a93;
             transform: scale(1.02);
         }
 
-        /* سایدبار */
+        /* سایدبار (کادر پررنگ) */
         .sidebar {
-            background: #162312e0;
+            background: #0097b2;
             border-radius: 28px;
             padding: 20px;
-            backdrop-filter: blur(4px);
-            border: 1px solid #6e964b;
+            border: 1px solid #b2ebf2;
             height: fit-content;
+            color: #f0feff;
         }
         .sidebar h3 {
             font-size: 1.6rem;
-            border-right: 6px solid #8bc34a;
+            border-right: 6px solid #b2ebf2;
             padding-right: 15px;
             margin-bottom: 20px;
+            color: #ffffff;
         }
         .hot-news-list {
             list-style: none;
         }
         .hot-news-list li {
             margin-bottom: 18px;
-            border-bottom: 1px dashed #567a3a;
+            border-bottom: 1px dashed #7acbd8;
             padding-bottom: 12px;
         }
         .hot-news-list a {
             text-decoration: none;
-            color: #c7f0a0;
+            color: #e3fffa;
             font-weight: 500;
             transition: 0.2s;
         }
         .hot-news-list a:hover {
-            color: #f5ffcf;
+            color: #ffffff;
             padding-right: 5px;
         }
         .hot-date {
             font-size: 0.7rem;
             display: block;
-            color: #a5c882;
+            color: #caf7ff;
             margin-top: 6px;
         }
 
         /* فوتر */
         footer {
-            background: #0a1a07;
+            background: #005f73;
             text-align: center;
             padding: 30px 10px;
             margin-top: 50px;
-            border-top: 2px solid #44672e;
+            border-top: 2px solid #b2ebf2;
             font-size: 0.85rem;
+            color: #e2f7ff;
+        }
+        footer a {
+            color: #b2ebf2;
         }
 
-        /* دکمه آپلود خبر (تنها برای نمایش) */
         .dev-note {
-            background: #2f4124;
+            background: #00a5c3;
             padding: 12px;
             border-radius: 16px;
             text-align: center;
             margin: 15px 0;
             font-size: 0.9rem;
+            color: #f0fefd;
         }
 
         @media (max-width: 800px) {
@@ -267,9 +267,7 @@
         </div>
 
         <div class="content-grid">
-            <!-- بخش اصلی اخبار -->
             <main>
-                <!-- کارت خبری 1 -->
                 <article class="news-card">
                     <img class="news-img" src="https://picsum.photos/id/20/800/450" alt="ماینکرفت آپدیت جدید">
                     <div class="news-content">
@@ -279,11 +277,10 @@
                             <span>👾 ۲۴۰۰ بازدید</span>
                         </div>
                         <p class="news-summary">موجنگ به‌طور رسمی از آپدیت 1.21 با نام "Tricky Trials" رونمایی کرد. این آپدیت شامل سازه‌های زیرزمینی جدید، mobهای چالش‌برانگیز و بلوک‌های تزئینی فوق‌العاده است. ماجراجویی در Trial Chamber کاملاً تجربه نبرد را تغییر می‌دهد...</p>
-                        <button class="read-more" onclick="alert('🔧 خبر کامل در نسخه نهایی سایت قرار می‌گیرد. این یک دمو است!')">ادامه مطلب →</button>
+                        <button class="read-more" onclick="alert('🔧 خبر کامل در نسخه نهایی سایت قرار می‌گیرد.')">ادامه مطلب →</button>
                     </div>
                 </article>
 
-                <!-- کارت خبری 2 -->
                 <article class="news-card">
                     <img class="news-img" src="https://picsum.photos/id/182/800/450" alt="فیلم ماینکرفت">
                     <div class="news-content">
@@ -297,7 +294,6 @@
                     </div>
                 </article>
 
-                <!-- کارت خبری 3 -->
                 <article class="news-card">
                     <img class="news-img" src="https://picsum.photos/id/356/800/450" alt="مود محبوب">
                     <div class="news-content">
@@ -316,7 +312,6 @@
                 </div>
             </main>
 
-            <!-- نوار کناری: داغ‌ترین اخبار -->
             <aside class="sidebar">
                 <h3>🔥 داغ امروز</h3>
                 <ul class="hot-news-list">
@@ -326,7 +321,7 @@
                     <li><a href="#">🎮 ماینکرفت ارث :  نسخه لگو هم به بازار آمد</a><span class="hot-date">۵ روز پیش</span></li>
                     <li><a href="#">🌍 سرورهای محبوب ایرانی جایزه گرفتند</a><span class="hot-date">هفته گذشته</span></li>
                 </ul>
-                <div style="margin-top: 35px; background: #1c2e12; border-radius: 18px; padding: 15px;">
+                <div style="margin-top: 35px; background: #005f73; border-radius: 18px; padding: 15px; color: white;">
                     <p style="font-size: 0.9rem;">📰 <strong>خبر فوری:</strong> Mojang درحال کار روی حالت جدیدی بنام "چندجهانی" است.</p>
                 </div>
             </aside>
@@ -337,7 +332,7 @@
         <div class="container">
             <p>© 2025 کرافت‌نیوز — تمامی حقوق برای طرفداران ماینکرفت محفوظ است.</p>
             <p style="margin-top: 8px;">🚀 این سایت با عشق به دنیای مکعب‌ها ساخته شده | اخبار غیررسمی اما دقیق</p>
-            <p style="font-size: 0.7rem; margin-top: 12px;">پیشنهاد: برای هاست رایگان از <a href="https://pages.github.com/" style="color:#b1e082;" target="_blank">GitHub Pages</a> یا <a href="https://www.netlify.com/" style="color:#b1e082;" target="_blank">Netlify</a> استفاده کنید.</p>
+            <p style="font-size: 0.7rem; margin-top: 12px;">پیشنهاد: برای هاست رایگان از <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> یا <a href="https://www.netlify.com/" target="_blank">Netlify</a> استفاده کنید.</p>
         </div>
     </footer>
 </body>
